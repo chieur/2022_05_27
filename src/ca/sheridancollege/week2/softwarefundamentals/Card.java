@@ -2,57 +2,58 @@ package ca.sheridancollege.week2.softwarefundamentals;
 
 /**
 	a class to model Card objects
-	@author dancye
-	@since 2019
+	@author chieur
 */
 public class Card{
-	private String suit;// spades , hearts , clubs , diamonds
+	public enum enum_suit{
+		spade
+		,heart
+		,club
+		,diamond
+	}
+
+	private enum_suit suit;
 	private int value;// 1 - 13
 
 	/**
 		constructor with arguments suit & value
-		@param givenSuit
-		@param givenValue
+		@param suit
+		@param value
 	*/
-	public Card(String givenSuit,int givenValue){
-		suit=givenSuit;
-		value=givenValue;
+	public Card(enum_suit suit,int value){
+		set_suit(suit);
+		set_value(value);
 	}
 
 	/**
 		@return the suit
 	*/
-	public String getSuit(){
+	public enum_suit get_suit(){
 		return suit;
 	}
 
 	/**
 		@param suit the suit to set
 	*/
-	public void setSuit(String suit){
-		if(suit.equals("Hearts")||suit.equals("Diamonds")||suit.equals("Clubs")||suit.equals("Spades")){
-			this.suit=suit;
-		}else{
-			System.out.println("the suit you tried to assign is invalid");
-			System.out.println("choose from: Spades , Hearts , Clubs , Diamonds");
-		}
+	public void set_suit(enum parameter_suit){
+		suit=parameter_suit;
 	}
 
 	/**
 		@return the value
 	*/
-	public int getValue(){
+	public int get_value(){
 		return value;
 	}
 
 	/**
 		@param value the value to set
 	*/
-	public void setValue(int value){
+	public void set_value(int parameter_value){
 		if(value<1||value>13){
 			System.out.println("the value of the card must be between 1 - 13");
 		}else{
-			this.value=value;
+			value=parameter_value;
 		}
 	}
 }
