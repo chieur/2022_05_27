@@ -1,16 +1,16 @@
 package ca.sheridancollege.week2.softwarefundamentals;
 
 /**
-	a class to model Card objects .
-	created in Week 2 for the cloning repository demo
-	@author dancye , 2019
+	a class to model Card objects
+	@author dancye
+	@since 2019
 */
 public class Card{
 	private String suit;// spades , hearts , clubs , diamonds
 	private int value;// 1 - 13
 
 	/**
-		a constructor that creates a Card object with a given suit and a given value
+		constructor with arguments suit & value
 		@param givenSuit
 		@param givenValue
 	*/
