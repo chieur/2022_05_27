@@ -33,9 +33,9 @@ public class Card{
 	}
 
 	/**
-		@param suit the suit to set
+		@param parameter_suit the suit to set
 	*/
-	public void set_suit(enum parameter_suit){
+	public void set_suit(enum_suit parameter_suit){
 		suit=parameter_suit;
 	}
 
@@ -47,7 +47,7 @@ public class Card{
 	}
 
 	/**
-		@param value the value to set
+		@param parameter_value the value to set
 	*/
 	public void set_value(int parameter_value){
 		if(value<1||value>13){
